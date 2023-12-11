@@ -4,27 +4,14 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Client } from "./generated/iop";
+import SignIn from "./Pages/LoginPage";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
-let client = new Client();
-// client
-//   .napraviKorisnika(
-//     new Korisnik({
-//       id: 0,
-//       jmbg: "555",
-//       ime: "onaj",
-//       prezime: "sto sam te jebo",
-//       korisnickoIme: "onaj",
-//       lozinka: "onajstosamtejebo",
-//     })
-//   )
-//   .then((x) => console.log(x));
-let korisnici = client.dajSveKorisnike().then((x) => console.log(x));
 root.render(
   <React.StrictMode>
-    <App />
+    <SignIn></SignIn>
   </React.StrictMode>
 );
 
